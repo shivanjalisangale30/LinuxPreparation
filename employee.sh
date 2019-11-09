@@ -1,7 +1,7 @@
 #!/bin/bash -x
 RateperHr=10;
-isfulltime=1;
-isparttime=2;
+isFULLTIME=1;
+isPARTTIME=2;
 empcheck=$(( RANDOM % 3))
 
 case $empcheck in
