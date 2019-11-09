@@ -1,17 +1,37 @@
 #!/bin/bash -x
 isfulltime=1;
 isparttime=2;
-empcheck=(( RANDOM % 3))
+RateperHr=20;
 Hrs=true;
-count=1;
+
 while [ $Hrs ]
 do 
-  case 
-   echo $count
-   if [ $count -eq 20 ]
+empcheck=$(( RANDOM % 3 ))
+
+  case $empcheck in
+
+   $isfulltime)
+   Hrs=5;
+   if [ $Hrs -eq 20 ]
    then 
      break
    else
-    ((count++))
-    fi
+    ((Hrs++))
+    fi;;
+
+  $isparttime)
+   Hrs=3;
+   if [ $Hrs -eq 20 ]
+   then 
+     break
+   else
+    ((Hrs++))
+    fi;;
+
+    *)
+   Hrs=0;;
+
 done
+
+salary=$(($RateperHr*$Hrs))
+echo $salary
