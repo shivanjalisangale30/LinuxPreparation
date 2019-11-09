@@ -1,5 +1,8 @@
-#!/bin/bash +x
-if((RANDOM % 2==1))
+#!/bin/bash -x
+present=$(( RANDOM % 2))
+if [ $present==1 ]
+then
 echo "Employee is present"
-else
+else [ $present==0 ]
 echo "Employee is absent"
+fi

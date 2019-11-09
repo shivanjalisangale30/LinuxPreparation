@@ -3,16 +3,13 @@ isfulltime=1;
 isparttime=2;
 RateperHr=20;
 Hrs=true;
-
 while [ $Hrs ]
 do 
 empcheck=$(( RANDOM % 3 ))
-
-  case $empcheck in
-
-   $isfulltime)
+case $empcheck in
+$isfulltime)
    Hrs=5;
-   if [ $Hrs -eq 20 ]
+   if [ $Hrs -eq 50 ]
    then 
      break
    else
@@ -21,7 +18,7 @@ empcheck=$(( RANDOM % 3 ))
 
   $isparttime)
    Hrs=3;
-   if [ $Hrs -eq 20 ]
+   if [ $Hrs -eq 50 ]
    then 
      break
    else
@@ -30,8 +27,6 @@ empcheck=$(( RANDOM % 3 ))
 
     *)
    Hrs=0;;
-
 done
-
-salary=$(($RateperHr*$Hrs))
+salary=$(($RateperHr*$Hrs)
 echo $salary

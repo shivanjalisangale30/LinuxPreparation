@@ -10,7 +10,7 @@ echo "Empolee is present"
 elif [ $randomcheck -eq $isparttime ]
 then
 Hrs=6;
-echo "Part time"
+echo "Part time  employee is there"
 else
 echo "Employee is absent"
 fi
