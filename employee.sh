@@ -1,5 +1,6 @@
 #!/bin/bash -x
 RateperHr=10;
+
 isFULLTIME=1;
 isPARTTIME=2;
 empcheck=$(( RANDOM % 3))

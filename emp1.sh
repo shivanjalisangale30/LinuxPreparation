@@ -6,7 +6,7 @@ isparttime=0;
 if [ $randomchek -eq $isfulltime ];
 then
 Hrs=5;
-echo "Empolee is present"
+echo "Empolee is present and there is he"
 elif [ $randomcheck -eq $isparttime ]
 then
 Hrs=6;
