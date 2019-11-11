@@ -1,29 +1,37 @@
 #!/bin/bash -x
-function myfunc()
-{
 empcheck=$((RANDOM%3))
 RateperHr=10;
 isFulltime=1;
 isParttime=2;
-if [ $empcheck -eq $isFulltime ]
-then 
-  Hrs=8;
-  echo "Fulltime employee"
-elif [ $empcheck -eq $isParttime ]
+TotalSalary=0;
+hours=0;
+
+function emp()
+{
+empcheck=$((RANDOM%3))
+ if [ $empcheck -eq $isFulltime ]
  then 
- Hrs=4;
-  echo "Parttime employee"
-else 
-  Hrs=0;
-  echo "Absent"
-fi
-salary=$(($RateperHr*$Hrs))
-echo $salary
+    Hrs=8;
+  elif [ $empcheck -eq $isParttime ]
+  then 
+    Hrs=4;
+  else 
+     Hrs=0;
+  fi
+  echo $Hrs
 }
+
+function salary()
+{
+ hours=$(emp)
+ TotalSalary=$(( $RateperHr * $hours ))
+ echo "working" 
+}
+ 
 for((day=1; day<=20; day++))
-do 
-result=$(myfunc)
-echo ${result[@]}
-done
+  do 
+  sal[day]=$(salary)
+  done
+echo ${sal[@]}
 
 
