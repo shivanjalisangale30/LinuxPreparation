@@ -1,18 +1,18 @@
 #!/bin/bash -x
 RateperHr=10;
-isfulltime=1;
-isparttime=2;
+isFULLtime=1;
+isPARTtime=2;
 
-for (( day=1; day<=20; day++ ))
+for (( DAY=1; DAY<=20; DAY++ ))
 do
-empcheck=$(( RANDOM % 3))
+employeecheck=$(( RANDOM % 3))
 case $empcheck in
 
-$isfulltime)
+$isFULLtime)
 Hrs=5;
 ;;
 
-$isparttime)
+$isPARTtime)
 Hrs=6;
 ;;
 
