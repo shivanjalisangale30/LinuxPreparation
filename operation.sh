@@ -1,5 +1,7 @@
 #!/bin/bash -x
-read -p "Enter your choices"
-read -p "Enter the First Number": a
-read -p "Enter the Second Number": b
-read -p "Enter the Third Number": c
+read -p "Enter your choice"
+read -p "Enter First Number": a 
+read -p "Enter Second Number": b
+read -p "Enter Thrird Nuber": c
+opeartion=$(($a+$b*$c))
+echo "Your result is": $opeartion
