@@ -18,4 +18,7 @@ echo "Your result 4  is": ${results[operation4]}
 
 echo "key: ${!results[@]} value:${results[@]} "
 
-echo $( printf "%s\n" ${results[@]} | sort -nr)
+echo "Descending order" $( printf "%s\n" ${results[@]} | sort -nr)
+
+echo "Ascending order" $( printf "%s\n" ${results[@]} | sort -n)
+
