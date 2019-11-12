@@ -1,7 +1,9 @@
 #!/bin/bash -x
 
-echo -e "Enter the number \c"
-read a b c
+read -p "Enter your choice"
+read -p "Enter First Number": a 
+read -p "Enter Second Number": b
+read -p "Enter Thrird Nuber": c
 
 declare -A results
 results[opeartion1]=$(($a+$b*$c))
@@ -14,5 +16,5 @@ echo "Your result 2  is": ${results[operation2]}
 echo "Your result 3  is": ${results[operation3]}
 echo "Your result 4  is": ${results[operation4]}
 
-echo "In array format key: ${!results[@]} value:${results[@]} "
+echo "key: ${!results[@]} value:${results[@]} "
 
