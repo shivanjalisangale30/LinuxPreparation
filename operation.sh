@@ -18,3 +18,4 @@ echo "Your result 4  is": ${results[operation4]}
 
 echo "key: ${!results[@]} value:${results[@]} "
 
+echo $( printf "%s\n" ${results[@]} | sort -nr)
